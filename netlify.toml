@@ -1,7 +1,7 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://quantum-it-backend.onrender.com/:splat"
+  to = "https://quantum-it-backend-1.onrender.com/:splat"
   status = 200
 
 [[redirects]]

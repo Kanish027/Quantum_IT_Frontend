@@ -62,7 +62,6 @@ export const LoginUser = (email, password) => async (dispatch) => {
     dispatch(LoginUserSuccess(data.user));
   } catch (error) {
     dispatch(LoginUserFailure(error.response.data.message));
-    console.log(error);
   }
 };
 
@@ -96,9 +95,7 @@ export const LogoutUser = () => async (dispatch) => {
     dispatch(LogoutUserRequest());
     const { data } = await axios.get("/api/api/v1/user/logout");
     dispatch(LogoutUserSuccess(data.message));
-    toast.success(data.message);
   } catch (error) {
     dispatch(LogoutUserFailure(error.response.data.message));
-    toast.error(error.response.data.message);
   }
 };
