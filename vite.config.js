@@ -6,8 +6,8 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://quantum-it-backend-1.onrender.com",
-        // target: "http://localhost:5000",
+        // target: "https://quantum-it-backend-1.onrender.com",
+        target: "http://localhost:5000",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       },
